@@ -62,20 +62,35 @@ int main()
     //     cout << value<<" ";
     //  }
 
-   cout <<"third technique (delete with range means from 2 to 4)"<<endl;
-    auto start_itr = set1.begin();//(start_itr is a variable)
-    start_itr++; //2
+//    cout <<"third technique (delete with range means from 2 to 4)"<<endl;
+//     auto start_itr = set1.begin();//(start_itr is a variable)
+//     start_itr++; //2
 
-    auto end_itr = set1.begin();//(end_itr is a variable)
-    advance(end_itr, 3);//4
+//     auto end_itr = set1.begin();//(end_itr is a variable)
+//     advance(end_itr, 3);//4
 
-    set1.erase(start_itr, end_itr);
+//     set1.erase(start_itr, end_itr);
 
-    for(auto value:set1){
-        cout << value<<" ";
+//     for(auto value:set1){
+//         cout << value<<" ";
+//     }
+    cout<<endl;
+
+// searching 
+//using 1st technique
+//find function return the position of element else return end iterator
+    // if(set1.find(5)!=set1.end()){
+    //     cout<<"value is present "<<endl;
+    // }else{
+    //     cout<<"Value is not present "<<endl;
+    // }
+
+//using 2nd technique
+    if(set1.count(0)){ // it return no of occurence
+        cout<<"value is present";
     }
-
-
-
+    else{
+        cout<<"value is not present ";
+    }
 
 }
