@@ -1,64 +1,38 @@
-// #include<iostream>
-// #include<bits/stdc++.h>
-// using namespace std;
-// int main(){
-//     string name;
-//     cin >> name;
-//     transform(name.begin(),name.end(),name.begin(),::tolower);
-//     cout << name;
-//     return 0;
-// }
-
-//Questions you have given a string convert the string in the uppercase
-// #include<bits/stdc++.h>
-// using namespace std;
-// int main(){
-//     string name;
-//     getline(cin ,name);
-//     transform(name.begin(),name.end(),name.begin(),::toupper);
-//     cout << name;
-
-// }
-
-//sum of the array 
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    // int arr[]={10, 30, 45, 1, 2,3};
-    // int size = sizeof(arr)/sizeof(arr[0]);
-    // int sum = 0;
-    // for(int i = 0; i<size; i++){
-    //     sum = sum+arr[i];
-    // }
-    // cout << sum;
-
-    //maxmimum element in the array;
-    //bruteforce approach
-    // int arr[]={10, 30, 45, 1, 2,3};
-    // int size = sizeof(arr)/sizeof(arr[0]);
-    // sort(arr ,arr+size);
-    // for(int i = 0; i<size; i++){
-    //     cout << arr[i]<<" ";
-    // }
-    // cout <<endl;
-    // cout << arr[size-1];
    
-    //efficent solution 
+    cout <<"Enter the size of m and n "<<endl;
+    int m, n;
+    cin>>m >> n;
+    vector<int>v1(m);
+    vector<int>v2(n);
+    set<int>s1;
+    set<int>s2;
 
-    int arr[]={10, 30, 45, 1, 2,46};
-    int size = sizeof(arr)/sizeof(arr[0]);
-    
-    int max = arr[0];
-    for(int i=1; i<size;i++){
-        if(arr[i]>max)
-            max=arr[i];
+    cout <<"Enter the Elements in the v1 "<<endl;
+    for(int i = 0; i<m; i++){
+        cin >> v1[i];
+        s1.insert(v1[i]);
     }
-    cout << "max "<<max;
+    cout << endl<<endl;
+    
+    cout <<"Enter the Elements in the v2 "<<endl;
+    for(int i = 0;  i<n; i++){
+        cin >> v2[i];
+        s2.insert(v2[i]);
+    }
+
+    for(auto ele: s1){
+        cout << ele<<" ";
+    }
+        for(auto ele: s2){
+        cout << ele<<" ";
+    }
+    cout <<endl<<endl;
     
 
 
 
-    
-   
 }
