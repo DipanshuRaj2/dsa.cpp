@@ -1,38 +1,16 @@
-#include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-   
-    cout <<"Enter the size of m and n "<<endl;
-    int m, n;
-    cin>>m >> n;
-    vector<int>v1(m);
-    vector<int>v2(n);
-    set<int>s1;
-    set<int>s2;
+    int arr[] ={12,32,10,34,6,4,36};
+    int size=sizeof(arr)/sizeof(arr[0]);
+    int x =90;
+    int ans =34;
+    for(int i = 0; i<size; i++){
+        if(arr[i]==x)
+            ans = i;
+            break;
 
-    cout <<"Enter the Elements in the v1 "<<endl;
-    for(int i = 0; i<m; i++){
-        cin >> v1[i];
-        s1.insert(v1[i]);
     }
-    cout << endl<<endl;
-    
-    cout <<"Enter the Elements in the v2 "<<endl;
-    for(int i = 0;  i<n; i++){
-        cin >> v2[i];
-        s2.insert(v2[i]);
-    }
-
-    for(auto ele: s1){
-        cout << ele<<" ";
-    }
-        for(auto ele: s2){
-        cout << ele<<" ";
-    }
-    cout <<endl<<endl;
-    
-
-
+    cout <<"Ans "<<ans;
 
 }
