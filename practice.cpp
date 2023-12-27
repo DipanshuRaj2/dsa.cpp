@@ -7,20 +7,33 @@ int main(){
     for(int i = 0; i<v.size(); i++){
         cin >> v[i];
     }
-    cout <<"Enter the last occurence of the Element: ";
+    cout <<"Enter the Element which is greater than x: ";
     int x; 
     cin >> x;
 
+    bool found = false;
     for(int i = 0; i<v.size(); i++){
         if(v[i]==x){
-            cout <<"Element found: ";
+            found = true;
+            break;
+        }
+      
+    }
+    if(found){
+        int count=0;
+
+    for(int i = v.size()-1; i>=0; i--){
+        if(v[i]>x){
+            count++;
             
         }
-        else{
-            cout <<"Element not found: ";
-        }
-        
     }
+    cout<<"total no. of occurence of given element: "<<count;
+    }
+    else{
+        cout <<"Element not found: ";
+    }
+    
 
     return 0;
 }
