@@ -60,6 +60,7 @@ int main(){
     vector<int>v = {12, 23, 4, 5, 7, 61, 23};
     int indexOfLargest = largestElementIndex(v);
     cout <<"First largest element: "<<v[indexOfLargest]<<endl;
+    
     v[indexOfLargest] = -1;
 
     int indexOfSecondLargest = largestElementIndex(v);
