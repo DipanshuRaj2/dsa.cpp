@@ -15,7 +15,7 @@ int triplet(vector<int>v ,int target){
     return triplet_count;
 }
 int main(){
-    vector<int>v = {12, 3, 4, 5, 6, 0};
+    vector<int>v = {1,2,3,4,2,1};
     int target = 5;
     cout <<"triplet pairs are: "<<triplet(v , target);
     return 0;
