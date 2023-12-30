@@ -74,3 +74,40 @@
 // }
 
 //If the duplicate elements are present:
+#include<iostream>
+#include<vector>
+#include<limits.h>
+using namespace std;
+
+int secondLargestIndex(vector<int>v){
+    int max = INT_MIN;
+    int index = -1;
+    for(int i = 0; i<v.size(); i++){
+        if(v[i]>max){
+            max = v[i];
+            index = i;
+        }
+    }
+    return index;
+}
+int main(){
+    vector<int>v = {12, 23, 4, 5, 7, 61, 61};
+    int index = secondLargestIndex(v);
+    // cout << v[index]<<endl;
+
+    int largestElement = v[index];
+    // cout << largestElement<<" ";
+    for(int i = 0; i<v.size(); i++){
+        if(v[i] == largestElement){
+            v[i] = -1;
+        }
+    }
+    for(int i = 0; i<v.size(); i++){
+        cout << v[i]<<" ";
+    }
+    cout << endl;
+
+    int indexOfSecondLargest = secondLargestIndex(v);
+    cout <<v[indexOfSecondLargest]<<endl;
+    return 0;
+}
