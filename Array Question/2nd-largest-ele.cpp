@@ -1,6 +1,6 @@
 //find the second the largest element in the Given Array;
 
-
+//using main method 
 // #include<iostream>
 // #include<vector>
 // using namespace std;
@@ -73,13 +73,18 @@
 //     return 0;
 // }
 
+
+
+
+
 //If the duplicate elements are present:
+/*
 #include<iostream>
 #include<vector>
 #include<limits.h>
 using namespace std;
 
-int secondLargestIndex(vector<int>v){
+int LargestIndex(vector<int>v){
     int max = INT_MIN;
     int index = -1;
     for(int i = 0; i<v.size(); i++){
@@ -92,22 +97,58 @@ int secondLargestIndex(vector<int>v){
 }
 int main(){
     vector<int>v = {12, 23, 4, 5, 7, 61, 61};
-    int index = secondLargestIndex(v);
+    int index = LargestIndex(v);
     // cout << v[index]<<endl;
 
     int largestElement = v[index];
-    // cout << largestElement<<" ";
+    cout <<"Largest Element: "<< largestElement<<" ";
     for(int i = 0; i<v.size(); i++){
         if(v[i] == largestElement){
             v[i] = -1;
         }
     }
-    for(int i = 0; i<v.size(); i++){
-        cout << v[i]<<" ";
-    }
+    cout << endl;
+    // for(int i = 0; i<v.size(); i++){
+    //     cout << v[i]<<" ";        //updated array 12 23 4 5 7 -1 -1 
+    // }
     cout << endl;
 
-    int indexOfSecondLargest = secondLargestIndex(v);
+    int indexOfSecondLargest = LargestIndex(v);
     cout <<v[indexOfSecondLargest]<<endl;
+    return 0;
+}
+
+*/
+
+
+
+// Another solution of find the second largest element
+
+#include<iostream>
+#include<vector>
+#include<limits.h>
+using namespace std;
+
+int secondLargest(vector<int>v){
+
+    int max = INT_MIN;
+    int secondMax = INT_MIN;
+    for(int i = 0; i<v.size(); i++){
+        if(v[i]>max){
+            max = v[i];
+        }
+    }
+    for(int i = 0; i<v.size(); i++){
+        if(v[i]>secondMax && v[i] != max){
+            secondMax = v[i];
+        }
+    }
+    return secondMax;
+}
+
+
+int main(){
+    vector<int>v = {12, 23, 4, 5, 7, 61, 61};
+    cout <<"Second Largest Element: "<<secondLargest(v);
     return 0;
 }

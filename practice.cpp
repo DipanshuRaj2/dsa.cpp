@@ -1,4 +1,5 @@
-#include<iostream>
+
+/*#include<iostream
 #include<bits/stdc++.h>
 using namespace std;
 int getSecondOrderElements(int n, vector<int> v) {
@@ -33,5 +34,47 @@ int main(){
     int n = v.size();
     cout<< getSecondOrderElements(n , v);
     return 0;
-}
+}*/
 //hello hi
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+
+// int checkSorted(vector<int>v){
+//     bool check = true;
+//     for(int i = 0; i<v.size(); i++){
+//         if(v[i] > v[i+1]){
+//             check = false;
+//         }
+//     }
+//     return check;
+// }
+
+// int main(){
+//     vector<int>v = {0,0,0,1};
+//     cout <<checkSorted(v);
+
+//     return 0;
+// }
+
+#include <bits/stdc++.h>
+using namespace std;
+vector<vector<int>> pairSum(vector<int> &arr, int s){
+   // Write your code here.
+
+   for(int i = 0; i<arr.size(); i++){
+      for(int j = i+1; j<arr.size();j++){
+         if(arr[i]+ arr[j] == s){
+           return {arr[i], arr[j]};
+         }
+      }
+   }
+   return {};
+}
+int main(){
+    vector<int>v= {1, 2, 3, 4, 5};
+    int s;
+    cin >> s;
+    pairSum(v , s);.
+    
+}
