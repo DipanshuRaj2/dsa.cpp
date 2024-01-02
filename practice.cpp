@@ -57,24 +57,35 @@ int main(){
 //     return 0;
 // }
 
-#include <bits/stdc++.h>
-using namespace std;
-vector<vector<int>> pairSum(vector<int> &arr, int s){
-   // Write your code here.
+// #include <bits/stdc++.h>
+// using namespace std;
+// vector<vector<int>> pairSum(vector<int> &arr, int s){
+//    // Write your code here.
 
-   for(int i = 0; i<arr.size(); i++){
-      for(int j = i+1; j<arr.size();j++){
-         if(arr[i]+ arr[j] == s){
-           return {arr[i], arr[j]};
-         }
-      }
-   }
-   return {};
-}
-int main(){
-    vector<int>v= {1, 2, 3, 4, 5};
-    int s;
-    cin >> s;
-    pairSum(v , s);.
+//    for(int i = 0; i<arr.size(); i++){
+//       for(int j = i+1; j<arr.size();j++){
+//          if(arr[i]+ arr[j] == s){
+//            return {arr[i], arr[j]};
+//          }
+//       }
+//    }
+//    return {};
+// }
+// int main(){
+//     vector<int>v= {1, 2, 3, 4, 5};
+//     int s;
+//     cin >> s;
+//     pairSum(v , s);.
     
+// }
+
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    string s;
+    getline(cin ,s);
+    transform(s.begin(), s.end(),s.begin(),::tolower);
+    cout << s;
+    return 0;
 }
