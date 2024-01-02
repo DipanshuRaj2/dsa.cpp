@@ -32,7 +32,7 @@ int main(){
 
     //insering the last element in ans array
     for(int i = n-k; i<n; i++){
-        ansArray[j++]=v[i];
+        ansArray[j++]=v[i];2
     }
     //inserting the first element in ans array
     for(int i = 0; i<=k; i++){
