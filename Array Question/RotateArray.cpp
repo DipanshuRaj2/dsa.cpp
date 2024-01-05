@@ -14,7 +14,7 @@ so we use k = k%n
 
 
 
-*/
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -45,3 +45,15 @@ int main(){
     return 0;
 }
 
+*/
+
+//Again doing code
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    vector<int>v = {1,2,3,4,5};
+    vector<int>ansArray(v.size());
+    return 0;
+}
