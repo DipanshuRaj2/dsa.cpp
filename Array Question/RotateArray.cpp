@@ -48,12 +48,60 @@ int main(){
 */
 
 //Again doing code
-#include<iostream>
-#include<bits/stdc++.h>
-using namespace std;
+// #include<iostream>
+// #include<bits/stdc++.h>
+// using namespace std;
 
+// int main(){
+//     vector<int>v = {1,2,3,4,5};
+//     int n  = v.size();
+//     int k = 2;
+//     k = k%n;
+//     vector<int>ansArray(n);
+//     int j = 0;
+//     for(int i = n-k; i<n; i++){
+//         ansArray[j++] =v[i];
+//     }
+
+//     for(int i = 0; i<=k; i++){
+//         ansArray[j++] = v[i];
+//     }
+
+//     for(int i = 0; i<n; i++){
+//         cout <<ansArray[i] <<" ";
+//     }
+//     cout<<endl;
+//     return 0;
+// }
+
+#include<iostream>
+#include<vector>
+#include<bits/stdc++.h>
+
+
+using namespace std;
 int main(){
-    vector<int>v = {1,2,3,4,5};
-    vector<int>ansArray(v.size());
-    return 0;
+    vector<int>v;
+    cout <<v.size()<<endl;
+    for(int i = 0; i<5; i++){
+        int element;
+        cin >> element;
+
+        v.push_back(element);
+    }
+    int k = 2;
+    k = k%v.size();
+    reverse(v.begin(),v.end());
+    reverse(v.begin(),v.begin()+k);
+    reverse(v.begin()+k,v.end());
+
+    for(int i = 0; i<v.size(); i++){
+        cout << v[i]<<" ";
+    }
+  
+    //   for(int a : v){
+
+    //     cout<< a<<" ";
+    //   }
+
 }
