@@ -81,13 +81,19 @@ int main(){
 
 using namespace std;
 int main(){
-    vector<int>v;
-    cout <<v.size()<<endl;
-    for(int i = 0; i<5; i++){
-        int element;
-        cin >> element;
+    int n;
+    cin >> n;
+    vector<int>v(n);
+    cout <<"size of array: "<<v.size()<<endl;
+    // for(int i = 0; i<5; i++){
+    //     int element;
+    //     cin >> element;
 
-        v.push_back(element);
+    //     v.push_back(element);
+    // }
+    cout <<"ENter the Elements: ";
+    for(int i = 0; i<n; i++){
+        cin >> v[i];
     }
     int k = 2;
     k = k%v.size();
