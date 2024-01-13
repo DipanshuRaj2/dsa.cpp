@@ -29,6 +29,11 @@
 //     }
 //    return 0;
 // }
+
+
+
+// another technique
+
 #include<iostream>
 #include<vector>
 using namespace std;
