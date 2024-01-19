@@ -1,76 +1,88 @@
 // #include<iostream>
-// #include<vector>
-// #include<algorithm>
-// #include<set>
 // using namespace std;
-
-// int main(){
-
-//     int n, m ;
-//     cout<<"Enter the value of n and m"<<endl;
-//     cin >> n >> m;
-//     long long arr1[n];
-//     long long arr2[m];
-
-
-//     cout<<"Enter the Element in the arr1 "<<endl;
+// int linearSearch(int arr[], int n, int ele){
+//     int ans = -1;
 //     for(int i = 0; i<n; i++){
-//         cin >> arr1[i];
+//         if(arr[i] == ele)
+//             ans = i;
+//             break;
 //     }
-//     cout<<"Enter the Element in the arr2 "<<endl;
-//     for(int i = 0; i<m; i++){
-//         cin >> arr2[i];
-//     }
-//     sort(arr1, arr1+n);
-//     sort(arr2, arr2+m);
-
-
-//     cout<<"Element in the arr1 "<<endl;
-//     for(int i = 0; i<n; i++){
-//         cout << arr1[i]<<" ";
-//     }
-//     cout<<endl;
-
-//     cout<<"Element in the arr2 "<<endl;
-//     for(int i = 0; i<m; i++){
-//         cout << arr2[i]<<" ";
-//     }
-//     cout<< endl;
-//     vector<int>v;
-    
-
-//     for(int i = 0; i<n; i++){
-//         v.push_back(arr1[i]);
-        
-//     }
-
-//     for(int i = 0; i<m; i++){
-//         v.push_back(arr2[i]);
-//     }
-//     cout<< endl;
-//     cout<<"Element in the new array ";
-//     for(int i = 0; i<v.size(); i++){
-//         cout<< v[i]<<" ";
-//     }
-//     set<int>v2;
-//     for(auto v2 : v){
-//         cout<< v2<<" ";
-//     }
+//     return ans;
 
 // }
+// int main(){
+//     int arr[] = {3, 9, 18, 11, 7};
+//     int n = sizeof(arr)/sizeof(arr[0]);
+//     int ele = 12;
+//     cout<<linearSearch(arr, n , ele);
+//     return 0;
+// }
 
+//find the last occurence 
+// #include<iostream>
+// #include<vector>
+// #include<bits/stdc++.h>
+// using namespace std;
+// int countGreater(vector<int>v , int ele){
+//     int n = v.size();
+//     int ans = -1;
+//     int count = 0;
+//     for(int i = n-1; i>=0; i--){
+//         if(v[i] > ele){
+//             ans = v[i];
+//             count++;
+//         }
+
+//     }
+//     return count;
+// }
+
+// int main(){
+//     vector<int>n = {1,2,3,2,1,3,1};
+//     int ele = 2;
+//     cout<<countGreater(n, ele); 
+// }
+
+// #include<iostream>
+// #include<vector>
+// using namespace std;
+// bool sortedArray(vector<int>v){
+//     bool ans = true;
+//     int n = v.size();
+//     for(int i = 1; i<n; i++){
+//         if(v[i]<v[i-1]){
+//             ans = false;
+//             break;
+//         }
+//     }
+//     return ans;
+// }
+// int main()
+// {
+//     vector<int>v ={12,100,34, 45, 50, 56};
+//     cout<<sortedArray(v);
+//    return 0;
+// }
 #include<iostream>
+#include<vector>
 using namespace std;
-int main(){
-    float sum=0;
-    int count = 0;
-    // float average = 0;
-    for(int i = 0; i<=19; i++){
-        sum =sum+i;
-        count++;
+int sumOfEvenOddIndices(vector<int>&v){
+    int n = v.size();
+    int sum1 = 0;
+    int sum2 = 0;
+    for(int i =0; i<n;i++){
+        if(i % 2== 1){
+            sum1+=v[i];
+        }
+        else{
+            sum2+=v[i];
+        }
     }
-    cout<<count;
-    cout<<"sum : "<<sum<<endl;
-    float average = (sum/count);  
-    cout<<"average : "<<average;
+    return sum1-sum2;
+}
+
+int main(){
+    vector<int>v ={3,5,4,2,1};
+    cout<<sumOfEvenOddIndices(v);
+    return 0;
 }
