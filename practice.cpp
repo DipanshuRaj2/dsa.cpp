@@ -185,48 +185,70 @@
 
 //     return 0;
 // }
+// #include<iostream>
+// #include<vector>
+// #include<algorithm>
+// using namespace std;
+
+// vector<int>getArr(vector<int>arr, int start, int end){
+
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     vector<int>v;
+
+//     for(int i = 0; i<n; i++){
+//         int x;
+//         cin >> x;
+//         v.push_back(x);
+//     }
+//     for(int i = 0; i<n; i++){
+//         cout<<v[i]<<" ";
+//     }
+    
+//     int n1;
+//     cin>>n1;
+//     vector<int>arr;
+//     int i;
+//     for(i = 0; i<n1;i++){
+//     int ele;
+//     cin >> ele;
+//     arr.push_back(ele);
+//     }
+//     int 
+//     v.erase(v.begin()+arr[i]-1, v.begin()+arr[i+1]);
+
+//     // intv.size();
+//     cout<<v.size();
+//     for(auto ele : v){
+//         cout<<ele<<" ";
+//     }
+    
+
+//    return 0;
+// }
+
+// convert decimal to binary
+
 #include<iostream>
-#include<vector>
-#include<algorithm>
 using namespace std;
-
-vector<int>getArr(vector<int>arr, int start, int end){
-
-}
-
 int main()
 {
-    int n;
-    cin >> n;
-    vector<int>v;
+    // int binaryNum[32];
+    // int n = 8;
+    // int i = 0;
+    // while(n >= 0){
+    //     binaryNum[i] = n % 2;
+    //     n = n/2;
+    //     i++;
+    // }
 
-    for(int i = 0; i<n; i++){
-        int x;
-        cin >> x;
-        v.push_back(x);
-    }
-    for(int i = 0; i<n; i++){
-        cout<<v[i]<<" ";
-    }
-    
-    int n1;
-    cin>>n1;
-    vector<int>arr;
-    int i;
-    for(i = 0; i<n1;i++){
-    int ele;
-    cin >> ele;
-    arr.push_back(ele);
-    }
-    int 
-    v.erase(v.begin()+arr[i]-1, v.begin()+arr[i+1]);
-
-    // intv.size();
-    cout<<v.size();
-    for(auto ele : v){
-        cout<<ele<<" ";
-    }
-    
-
+    // for(int j = i-1; j >= 0; j--){
+    //     cout<<binaryNum[j] <<" ";
+    // }
+    cout<<"Hello world";
    return 0;
 }
