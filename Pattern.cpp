@@ -294,23 +294,207 @@
 //    return 0;
 // }
 
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i = 1; 
+//     while(i<=n){
+//         int j = n;
+//         while(j>=i){
+//             cout<<"*"<<" ";
+//             j--;
+//         }
+//         i++;
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n  ;
+//     cin >> n;
+//     printPat(n);
+//    return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i = 1;
+//     while(i<=n){
+//         int spaces = i-1;
+//         while(spaces){
+//             cout<<" ";
+//             spaces--;
+//         }
+//         int j = n-i+1;
+//         while(j>=1){
+//             cout<<"*";
+//             j--;
+//         }
+//         i++;    
+//         cout<<endl;
+//     }
+// }
+
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     printPat(n);
+//    return 0;
+// }
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i = 1;
+//     while(i<=n){
+//         int spaces = i-1;
+//         while(spaces){
+//             cout<<" ";
+//             spaces--;
+//         }
+//         int j = n, value = i;
+//         while(j>=i){
+//             cout<<value;
+//             j--;
+//         }
+//         i++;
+//         cout<<endl;
+//     }
+// }
+// int main(){
+//     int n;
+//     cin >> n;
+//     printPat(n);
+//     return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i = 1;
+//     while(i<=n){
+//         int spaces = n - i;
+//         while(spaces){
+//             cout<<" ";
+//             spaces--;
+//         }
+//         int value = i;
+//         int j = 1;
+//         while(j<=i){
+//             cout<<value;
+//             j++;
+//         }
+//         i++;
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin >>n;
+//     printPat(n);
+//    return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+// int i = 1;
+// while(i<=n){
+//     int spaces = i-1;
+//     while(spaces){
+//         cout<<" ";
+//         spaces--;
+//     }
+//     int j = n, value = i;
+//     while(j>=i){
+//         cout<<value++;
+//         j--;
+//     }
+//     i++;
+//     cout<<endl;
+//    }
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     printPat(n);
+
+//    return 0;
+// }
+
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i =1, count = 1;
+//     while(i<=n){
+//         int spaces = n-i;
+//         while(spaces){
+//             cout<<" ";
+//             spaces--;
+//         }
+//         int j = 1;
+//         while(j<=i){
+//             cout<<count++;
+//             j++;
+//         }
+//         i++;
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     printPat(n);
+//    return 0;
+// }
+
+
 #include<iostream>
 using namespace std;
 void printPat(int n){
-    int i = 1; 
+    int i = 1;
     while(i<=n){
-        int j = n;
-        while(j>=i){
-            cout<<"*"<<" ";
-            j--;
-        }
-        i++;
-        cout<<endl;
+        int spaces = n - i;
+        while(spaces){
+        cout<<" ";
+        spaces--;
+    }
+    int j = 1 ;
+    while(j<=i){
+        cout<<j;
+        j++;
+
+    }
+
+    //print 3rd triangle
+    int start = i - 1;
+    while(start){
+        cout<<start;
+        start--;
+    }
+    i++;
+    cout<<endl;
     }
 }
 int main()
 {
-    int n  ;
+    int n;
     cin >> n;
     printPat(n);
    return 0;
