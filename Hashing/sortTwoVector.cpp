@@ -1,13 +1,3 @@
-/*
-Given two vectors arr1[] and arr2[] of size m and n sorted in increasing order.Merge the two arrays into a single sorted array of size m+n.
-
-input: arr1 =[1,2,3], arr2 = [4,5,6]
-Output: arr = [1,2,3,4,5,6]
-
-input: arr1 =[1,3,5], arr2=[2,4,6]
-Output:  arr = [1,2,3,4,5,6]
-
-*/
 
 #include<iostream>
 #include<vector>
