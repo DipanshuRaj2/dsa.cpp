@@ -34,33 +34,32 @@
 //    return 0;
 // }
 
-// #include<bits/stdc++.h>
-// using namespace std;
-// bool checkIsomorphic(string s1, string s2){
-//     vector<int>v1(128, -1);
-//     vector<int>v2(128, -1);
-
-//     for(int i = 0; i<s1.size(); i++){
-//         if(v1[s1[i]] != v2[s2[i]]){
-//             return false;
-//         }
-//         v1[s1[i]] = v2[s1[i]] = i;
-//         }
-//         return true;
-// }
-// int main()
-// {
-//     string s1, s2;
-//     cin >> s1 >> s2;
-
-//     cout<<(checkIsomorphic(s1, s2)?"is isomorphic" : "no isomorphic");
-//    return 0;
-// }
 #include<bits/stdc++.h>
 using namespace std;
+bool checkIsomorphic(string s1, string s2){
+    vector<int>v1(128, -1);
+    vector<int>v2(128, -1);
+
+    for(int i = 0; i<s1.size(); i++){
+        if(v1[s1[i]] != v2[s2[i]]){
+            return false;
+        }
+        v1[s1[i]] = v2[s2[i]] = i;
+        }
+        return true;
+}
 int main()
 {
-    string s = "Dipanshu";
-    cout<<s.length();
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    cout<<(checkIsomorphic(s1, s2)?"is isomorphic" : "no isomorphic");
+    // if(checkIsomorphic(s1,s2)){
+    //     cout<<"Is isomorphic";
+
+    // }
+    // else{
+    //     cout<< "No isomorphic";
+    // }
    return 0;
 }
