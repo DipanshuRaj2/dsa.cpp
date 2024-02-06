@@ -65,29 +65,68 @@
 //    return 0;
 // }
 
+// #include<bits/stdc++.h>
+// using namespace std;
+// bool checkAnagram(string s1, string s2){
+//     unordered_map<char, int> m;
+
+//     for(int i = 0; i<s1.length(); i++){
+//         m[s1[i]]++;
+//     }
+//     for(int i = 0; i<s2.length(); i++){
+//         m[s2[i]]--;
+//     }
+
+//     for(auto &ele : m){
+//         if(ele.second !=0){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// int main()
+// {
+//     string s1 = "triangle";
+//     string s2 = "integral";
+//     cout<<(checkAnagram(s1,s2)?"Yes" : "No");
+//    return 0;
+// }
+
+//next way
 #include<bits/stdc++.h>
 using namespace std;
 bool checkAnagram(string s1, string s2){
+    if(s1.length()!=s2.length()){
+        return false;
+    }
+
     unordered_map<char, int> m;
-
-    for(int i = 0; i<s1.length(); i++){
-        m[s1[i]]++;
-    }
-    for(int i = 0; i<s2.length(); i++){
-        m[s2[i]]--;
+    for(auto ch1 : s1){
+        m[ch1]++;
     }
 
-    for(auto &ele : m){
-        if(ele.second !=0){
+    for(auto ch2 : s2){
+        if(m.find(ch2)==m.end()){
+            return false;
+        }
+        else{
+            m[ch2]--;
+        }
+    }
+
+    for(auto ele : m){
+        if(ele.second != 0){
             return false;
         }
     }
     return true;
+
 }
 int main()
 {
-    string s1 = "triangle";
-    string s2 = "integral";
-    cout<<(checkAnagram(s1,s2)?"Yes" : "No");
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    cout<<(checkAnagram(s1, s2)?"Anagram" : "No Anagram");
    return 0;
 }
