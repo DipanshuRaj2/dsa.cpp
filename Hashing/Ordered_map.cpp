@@ -64,6 +64,7 @@
 #include<iostream>
 #include<vector>
 #include<map>
+#include <xutility>
 using namespace std;
 int sumOfCommonElement(vector<int>v , int n){
     map<int, int>m;
