@@ -465,37 +465,143 @@
 // }
 
 
-#include<iostream>
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i = 1;
+//     //print space
+//     while(i<=n){
+//         int spaces = n - i;
+//         while(spaces){
+//         cout<<" ";
+//         spaces--;
+//     }
+//     //print 2nd part triangle
+//     int j = 1 ;
+//     while(j<=i){
+//         cout<<j;
+//         j++;
+
+//     }
+
+//     //print 3rd triangle
+//     int start = i - 1;
+//     while(start){
+//         cout<<start;
+//         start--;
+//     }
+//     i++;
+//     cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     printPat(n);
+//    return 0;
+// }
+
+
+
+
+#include <iostream>
 using namespace std;
-void printPat(int n){
-    int i = 1;
-    while(i<=n){
-        int spaces = n - i;
-        while(spaces){
-        cout<<" ";
-        spaces--;
-    }
-    int j = 1 ;
-    while(j<=i){
-        cout<<j;
-        j++;
 
-    }
-
-    //print 3rd triangle
-    int start = i - 1;
-    while(start){
-        cout<<start;
-        start--;
-    }
-    i++;
-    cout<<endl;
-    }
-}
 int main()
 {
-    int n;
-    cin >> n;
-    printPat(n);
-   return 0;
+
+    int number;
+    cin >> number;
+
+    int i = 1;
+
+    int counter = 1;
+    while (i <= number)
+    {
+        // Printing First triangle.
+        int first = number - i + 1;
+        int count = 1;
+        while (first)
+        {
+            cout << count;
+            count++;
+            first--;
+        }
+
+        // Printing half stars
+        int halfLeftStars = i - 1;
+        while (halfLeftStars)
+        {
+            cout << "*";
+            halfLeftStars--;
+        }
+        // Printing 2nd Half stars.
+        int stars2 = i - 1;
+        while (stars2)
+        {
+            cout << "*";
+            stars2--;
+        }
+        // Printing 3rd Triangle
+        int tri2 = number - i + 1;
+        while (tri2)
+        {
+            cout << tri2;
+            tri2--;
+        }
+
+        cout << endl;
+        row++;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #include<iostream>
+// using namespace std;
+// void printPat(int n){
+//     int i = 1;
+//     while(i<=n){
+//         int j = n , count = 1;
+//         while(j>=i){
+//             cout<<count++;
+//             j--;
+//         }
+//         int halfStar = n - j;
+//         while(halfStar){
+//             cout<<"*";
+//             halfStar--;
+
+//         }
+//         i++;
+//         cout<<endl;
+//     }
+// }
+// int main()
+// {
+//     int n;
+//     cin >> n;
+//     printPat(n);
+//    return 0;
+// }
